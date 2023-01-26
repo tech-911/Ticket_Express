@@ -4,6 +4,11 @@ import leftLanding from "../../assets/png/leftLanding.png";
 import rightLanding from "../../assets/png/rightLanding.png";
 import hero from "../../assets/png/Hero-Image.png";
 import Nav from "../../components/nav/Nav";
+import Services from "./services/Services";
+import About from "./about/About";
+import Subscribe from "./subscribe/Subscribe";
+import Footer from "../../components/footer/Footer";
+
 const Landing = () => {
   return (
     <div className="landing_wrapper">
@@ -32,6 +37,18 @@ const Landing = () => {
           </p>
           <button className="landing_hero_button">Book</button>
         </div>
+      </div>
+      <div className="landing_section2">
+        <Services />
+      </div>
+      <div className="landing_section3">
+        <About />
+      </div>
+      <div className="landing_section4">
+        <Subscribe />
+      </div>
+      <div className="landing_section5">
+        <Footer />
       </div>
     </div>
   );

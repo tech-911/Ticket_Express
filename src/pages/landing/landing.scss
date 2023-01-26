@@ -25,13 +25,33 @@
       position: absolute;
       top: 16%;
       right: 10rem;
+      @media screen and (max-width: 1450px) {
+        display: none;
+      }
     }
     .landing_hero_text_wrap {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       margin-left: 10rem;
+      margin-right: 10rem;
+      margin-top: 6rem;
       max-width: 40rem;
+
+      @media screen and (max-width: 500px) {
+        margin-top: 2rem;
+      }
+      @media screen and (max-width: 800px) {
+        align-items: center;
+      }
+
+      @media screen and (max-width: 1450px) {
+        max-width: 100%;
+      }
+      @media screen and (max-width: 1062px) {
+        margin-left: 3rem;
+        margin-right: 3rem;
+      }
       .landing_hero_text1 {
         font-family: "Poppins";
         font-style: normal;
@@ -51,6 +71,18 @@
         letter-spacing: -0.04em;
         color: #181e4b;
         margin-bottom: 2rem;
+        @media screen and (max-width: 800px) {
+          text-align: center;
+        }
+
+        @media screen and (max-width: 1450px) {
+          font-size: 60px;
+        }
+        @media screen and (max-width: 500px) {
+          font-size: 40px;
+          letter-spacing: unset;
+          line-height: unset;
+        }
       }
       .landing_hero_text3 {
         font-family: "Poppins";
@@ -61,6 +93,13 @@
         color: #5e6282;
         margin-bottom: 2rem;
         max-width: 30rem;
+        @media screen and (max-width: 800px) {
+          max-width: unset;
+          text-align: center;
+        }
+        @media screen and (max-width: 1450px) {
+          // max-width: 60%;
+        }
       }
       .landing_hero_button {
         background: #f1a501;
@@ -73,8 +112,32 @@
         line-height: 49px;
         text-align: center;
         color: #ffffff;
-        padding: .4rem 1.5rem;
+        padding: 0.4rem 1.5rem;
       }
     }
+  }
+  .landing_section2 {
+    margin-top: 12rem;
+    @media screen and (max-width: 800px) {
+      margin-top: 5rem;
+    }
+  }
+  .landing_section3 {
+    margin-top: 12rem;
+    // @media screen and (max-width: 800px) {
+    //   margin-top: 5rem;
+    // }
+  }
+  .landing_section4 {
+    margin-top: 12rem;
+    // @media screen and (max-width: 800px) {
+    //   margin-top: 5rem;
+    // }
+  }
+  .landing_section5 {
+    margin-top: 12rem;
+    // @media screen and (max-width: 800px) {
+    //   margin-top: 5rem;
+    // }
   }
 }
