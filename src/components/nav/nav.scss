@@ -11,6 +11,55 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  .Nav_mobile_close {
+    height: 0vh !important;
+    padding-top: 0rem !important;
+    transition: all 0.4s ease-in-out;
+  }
+  .Nav_mobile_menue {
+    overflow: hidden;
+    padding-top: 8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+    .Nav_mobile_menue_close_icon {
+      position: absolute;
+      top: 5%;
+      right: 15%;
+      z-index: 1050;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: #181e4b;
+    }
+    .Nav_right_lists {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      * {
+        margin-bottom: 2rem;
+        @include navText;
+        cursor: pointer;
+        padding-bottom: 0.1rem;
+        &:hover {
+          border-bottom: 1px solid #212832;
+        }
+      }
+    }
+    .Nav_right_login {
+      border: 1px solid #212832;
+      border-radius: 5px;
+      padding: 0.5rem 1.5rem;
+      @include navText;
+    }
+  }
   .Nav_wrapper {
     display: flex;
     flex-direction: row;
@@ -51,6 +100,15 @@
         padding: 0.5rem 1.5rem;
         margin-left: 1rem;
         @include navText;
+      }
+    }
+    .nav_hamburger {
+      margin-top: 1.1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #181e4b;
+      @media screen and (min-width: 800px) {
+        display: none;
       }
     }
   }
