@@ -65,6 +65,9 @@
           line-height: 124.5%;
           color: #5e6282;
           width: 15rem;
+          @media screen and (max-width: 900px) {
+            text-align: center;
+          }
         }
       }
       .footer_rightContent {

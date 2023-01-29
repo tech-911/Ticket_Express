@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
+  const navigate = useNavigate();
   const [hamburger, setHamburger] = useState(0);
   return (
     <div className="Nav_container">
@@ -20,13 +22,30 @@ const Nav = () => {
           }}
         />
         <ul className="Nav_right_lists">
-          <li className="Nav_right_list1">Bus</li>
-          <li className="Nav_right_list2">Train</li>
-          <li className="Nav_right_list3">Flights</li>
-          <li className="Nav_right_list4">Bookings</li>
-          <li className="Nav_right_list5">Contact Us</li>
+          <li className="Nav_right_list1">
+            <Link to="/comming">Bus</Link>
+          </li>
+          <li className="Nav_right_list2">
+            <Link to="/comming">Train</Link>
+          </li>
+          <li className="Nav_right_list3">
+            <Link to="/comming">Flights</Link>
+          </li>
+          <li className="Nav_right_list4">
+            <Link to="/comming">Bookings</Link>
+          </li>
+          <li className="Nav_right_list5">
+            <Link to="/comming">Contact Us</Link>
+          </li>
         </ul>
-        <button className="Nav_right_login">Login</button>
+        <button
+          onClick={() => {
+            navigate("/login");
+          }}
+          className="Nav_right_login"
+        >
+          Login
+        </button>
       </div>
       <div className="Nav_wrapper">
         <Link to="/" className="Nav_Logo_link">
@@ -35,13 +54,30 @@ const Nav = () => {
 
         <div className="Nav_right">
           <ul className="Nav_right_lists">
-            <li className="Nav_right_list1">Bus</li>
-            <li className="Nav_right_list2">Train</li>
-            <li className="Nav_right_list3">Flights</li>
-            <li className="Nav_right_list4">Bookings</li>
-            <li className="Nav_right_list5">Contact Us</li>
+            <li className="Nav_right_list1">
+              <Link to="/comming">Bus</Link>
+            </li>
+            <li className="Nav_right_list2">
+              <Link to="/comming">Train</Link>
+            </li>
+            <li className="Nav_right_list3">
+              <Link to="/comming">Flights</Link>
+            </li>
+            <li className="Nav_right_list4">
+              <Link to="/comming">Bookings</Link>
+            </li>
+            <li className="Nav_right_list5">
+              <Link to="/comming">Contact Us</Link>
+            </li>
           </ul>
-          <button className="Nav_right_login">Login</button>
+          <button
+            onClick={() => {
+              navigate("/login");
+            }}
+            className="Nav_right_login"
+          >
+            Login
+          </button>
         </div>
         <GiHamburgerMenu
           onClick={() => {
