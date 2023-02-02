@@ -1,5 +1,4 @@
 import axios from "axios";
-import { loginAction } from "../redux/actionCreators/login/loginAction";
 
 export const signupcall = async (api, data) => {
   try {

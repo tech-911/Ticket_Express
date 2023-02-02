@@ -42,6 +42,15 @@ const Login = () => {
       toast.success("Login Successful", {
         position: toast.POSITION.TOP_RIGHT,
       });
+      if (user.data.user.role === "super_admin") {
+        navigate("/superadmin");
+      }
+      if (user.data.user.role === "admin") {
+        navigate("/admin");
+      }
+      if (user.data.user.role === "user") {
+        navigate("/user");
+      }
     } else {
       toast.error(`Error: ${user.response.data}`, {
         position: toast.POSITION.TOP_RIGHT,

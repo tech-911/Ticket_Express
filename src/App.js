@@ -6,10 +6,12 @@ import PageNotFound from "./pages/error/NotFound";
 import CommingSoon from "./pages/error/construction";
 import Signup from "./pages/authentication/signup/Signup";
 import Login from "./pages/authentication/login/Login";
-import { useSelector } from "react-redux";
+import User from "./pages/protected/user/User";
+import Admin from "./pages/protected/admin/Admin";
+import Superadmin from "./pages/protected/superadmin/Superadmin";
+import AuthorizationRoute from "./AuthorizationRoute";
+
 const App = () => {
-  const user = useSelector((state) => state.login);
-  console.log(user);
   return (
     <div className="app_wrapper">
       <Routes>
@@ -20,7 +22,30 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
         {/* --------------internal pages (Proctected)---------------*/}
-        {!user ? <Route path="/login" element={<Login />} /> : <Route></Route>}
+        <Route
+          path="/user"
+          element={
+            <AuthorizationRoute role="user">
+              <User />
+            </AuthorizationRoute>
+          }
+        ></Route>
+        <Route
+          path="/admin"
+          element={
+            <AuthorizationRoute role="admin">
+              <Admin />
+            </AuthorizationRoute>
+          }
+        ></Route>
+        <Route
+          path="/superadmin"
+          element={
+            <AuthorizationRoute role="super_admin">
+              <Superadmin />
+            </AuthorizationRoute>
+          }
+        ></Route>
       </Routes>
     </div>
   );

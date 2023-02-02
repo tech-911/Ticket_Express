@@ -6,7 +6,6 @@ const loginReducer = (state = initialState, loginAction) => {
   switch (loginAction.type) {
     case type.LOGINTYPE:
       return {
-        ...state,
         ...loginAction.payload,
       };
 

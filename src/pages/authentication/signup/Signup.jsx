@@ -34,6 +34,7 @@ const Signup = () => {
       name: `${data.firstname} ${data.lastname}`,
       email: data.email,
       password: data.password,
+      role: "user",
     });
     if (res.status === 200) {
       toast.success("Signup Successful", {
@@ -44,6 +45,15 @@ const Signup = () => {
         password: data.password,
       });
       dispatch(loginAction(user.data));
+      if (user.data.user.role === "super_admin") {
+        navigate("/superadmin");
+      }
+      if (user.data.user.role === "admin") {
+        navigate("/admin");
+      }
+      if (user.data.user.role === "user") {
+        navigate("/user");
+      }
     } else {
       toast.error(`Error: ${res.response.data}`, {
         position: toast.POSITION.TOP_RIGHT,

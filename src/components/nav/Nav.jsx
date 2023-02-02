@@ -6,10 +6,18 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { store } from "../../redux/store";
+import { loginAction } from "../../redux/actionCreators/login/loginAction";
 
 const Nav = () => {
+  const user = useSelector((state) => state.login);
   const navigate = useNavigate();
   const [hamburger, setHamburger] = useState(0);
+  const handleLogout = () => {
+    store.dispatch(loginAction(null));
+    // navigate("/login");
+  };
   return (
     <div className="Nav_container">
       <div
@@ -38,14 +46,25 @@ const Nav = () => {
             <Link to="/comming">Contact Us</Link>
           </li>
         </ul>
-        <button
-          onClick={() => {
-            navigate("/login");
-          }}
-          className="Nav_right_login"
-        >
-          Login
-        </button>
+        {Object.keys(user).length === 0 ? (
+          <button
+            onClick={() => {
+              navigate("/login");
+            }}
+            className="Nav_right_login"
+          >
+            Login
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              handleLogout();
+            }}
+            className="Nav_right_login"
+          >
+            Logout
+          </button>
+        )}
       </div>
       <div className="Nav_wrapper">
         <Link to="/" className="Nav_Logo_link">
@@ -70,14 +89,25 @@ const Nav = () => {
               <Link to="/comming">Contact Us</Link>
             </li>
           </ul>
-          <button
-            onClick={() => {
-              navigate("/login");
-            }}
-            className="Nav_right_login"
-          >
-            Login
-          </button>
+          {Object.keys(user).length === 0 ? (
+            <button
+              onClick={() => {
+                navigate("/login");
+              }}
+              className="Nav_right_login"
+            >
+              Login
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                handleLogout();
+              }}
+              className="Nav_right_login"
+            >
+              Logout
+            </button>
+          )}
         </div>
         <GiHamburgerMenu
           onClick={() => {
