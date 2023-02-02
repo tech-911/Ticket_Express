@@ -18,7 +18,7 @@ const Nav = () => {
     store.dispatch(loginAction(null));
     // navigate("/login");
   };
- console.log(user)
+  console.log(user);
   return (
     <div className="Nav_container">
       <div
@@ -47,7 +47,7 @@ const Nav = () => {
             <Link to="/comming">Contact Us</Link>
           </li>
         </ul>
-        {Object.keys(user).length === 0 ? (
+        {!user ? (
           <button
             onClick={() => {
               navigate("/login");
@@ -90,7 +90,7 @@ const Nav = () => {
               <Link to="/comming">Contact Us</Link>
             </li>
           </ul>
-          {Object.keys(user).length === 0 ? (
+          {!user ? (
             <button
               onClick={() => {
                 navigate("/login");
