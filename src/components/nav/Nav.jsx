@@ -18,6 +18,7 @@ const Nav = () => {
     store.dispatch(loginAction(null));
     // navigate("/login");
   };
+ console.log(user)
   return (
     <div className="Nav_container">
       <div
