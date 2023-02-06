@@ -1,0 +1,17 @@
+.user_wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  .user_outlet {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 70%;
+    background-color: #fcefec;
+    .user_nav {
+    }
+  }
+}

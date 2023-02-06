@@ -6,10 +6,11 @@ import PageNotFound from "./pages/error/NotFound";
 import CommingSoon from "./pages/error/construction";
 import Signup from "./pages/authentication/signup/Signup";
 import Login from "./pages/authentication/login/Login";
-import User from "./pages/protected/user/User";
+import User from "./pages/protected/user";
 import Admin from "./pages/protected/admin/Admin";
 import Superadmin from "./pages/protected/superadmin/Superadmin";
 import AuthorizationRoute from "./AuthorizationRoute";
+import Booking from "./pages/protected/user/booking/Booking";
 
 const App = () => {
   return (
@@ -29,7 +30,9 @@ const App = () => {
               <User />
             </AuthorizationRoute>
           }
-        ></Route>
+        >
+          <Route path="/user/booking" element={<Booking />} />
+        </Route>
         <Route
           path="/admin"
           element={
@@ -37,7 +40,9 @@ const App = () => {
               <Admin />
             </AuthorizationRoute>
           }
-        ></Route>
+        >
+          <Route path="/admin/comming" element={<CommingSoon />} />
+        </Route>
         <Route
           path="/superadmin"
           element={
