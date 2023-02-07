@@ -3,10 +3,12 @@ import { Outlet } from "react-router-dom";
 import "./user.scss";
 import Sidenav from "../../../components/sidenav/Sidenav";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useSelector } from "react-redux";
 
 const Index = () => {
   const [side, setSide] = useState(0);
-  console.log(side);
+  const {user} = useSelector((state) => state.login);
+
   return (
     <div className="user_wrapper">
       <Sidenav side={side} setSide={setSide} />
@@ -18,6 +20,10 @@ const Index = () => {
             }}
             className="user_hamburger"
           />
+          <div className="user_nav_text_wrap">
+            <h1 className="user_nav_text1">Hello, {user.name}!</h1>
+            <p className="user_nav_text2">Welcome back and explore the world.</p>
+          </div>
         </div>
         <Outlet />
       </div>

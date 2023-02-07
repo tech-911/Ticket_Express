@@ -28,7 +28,7 @@ const Sidenav = ({ side, setSide }) => {
       </Link>
       <div className="sidenav_options">
         {data.map(({ icon, name, link, id }) => {
-          return <SideMenu key={id} icon={icon} name={name} link={link} />;
+          return <SideMenu key={id} icon={icon} name={name} link={link} id={id}/>;
         })}
       </div>
       <div

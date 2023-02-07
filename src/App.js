@@ -11,6 +11,9 @@ import Admin from "./pages/protected/admin/Admin";
 import Superadmin from "./pages/protected/superadmin/Superadmin";
 import AuthorizationRoute from "./AuthorizationRoute";
 import Booking from "./pages/protected/user/booking/Booking";
+import Transactions from "./pages/protected/user/transaction/Transaction";
+import History from "./pages/protected/user/history/History";
+import Settings from "./pages/protected/user/settings/Settings";
 
 const App = () => {
   return (
@@ -33,6 +36,9 @@ const App = () => {
         >
           <Route index element={<Booking />} />
           <Route path="/user/booking" element={<Booking />} />
+          <Route path="/user/transaction" element={<Transactions />} />
+          <Route path="/user/history" element={<History />} />
+          <Route path="/user/settings" element={<Settings />} />
         </Route>
         <Route
           path="/admin"

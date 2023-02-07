@@ -24,8 +24,8 @@ const AuthorizationRoute = ({ children, role }) => {
     default:
       value = testNavigate();
   }
-  console.log("value: ", value);
-  console.log("role: ", user?.role);
+  // console.log("value: ", value);
+  // console.log("role: ", user?.role);
 
   return value;
 };

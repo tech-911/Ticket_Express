@@ -17,9 +17,24 @@
 @mixin LinkHover {
   background: #df6951;
   border-radius: 10px;
-  color: white;
+  // color: white;
 }
-
+.sideop_active {
+  @include LinkHover();
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.sideop_active_text {
+  color: white !important;
+}
+.sideop_active_icon {
+  .icon0,
+  .icon1,
+  .icon2,
+  .icon3 {
+    color: white !important;
+  }
+}
 .sideop_link {
   @include Link;
   display: flex;
