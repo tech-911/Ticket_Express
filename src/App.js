@@ -31,6 +31,7 @@ const App = () => {
             </AuthorizationRoute>
           }
         >
+          <Route index element={<Booking />} />
           <Route path="/user/booking" element={<Booking />} />
         </Route>
         <Route
