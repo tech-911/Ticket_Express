@@ -2,18 +2,35 @@ import React from "react";
 import Landing from "./pages/landing/Landing";
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
+
+// --------------Error pages import-------------------------
 import PageNotFound from "./pages/error/NotFound";
 import CommingSoon from "./pages/error/construction";
+
+// --------------Authentication/authorization-------------------------
 import Signup from "./pages/authentication/signup/Signup";
 import Login from "./pages/authentication/login/Login";
-import User from "./pages/protected/user";
-import Admin from "./pages/protected/admin/Admin";
-import Superadmin from "./pages/protected/superadmin/Superadmin";
 import AuthorizationRoute from "./AuthorizationRoute";
+
+// --------------User pages import-------------------------
+import User from "./pages/protected/user";
 import Booking from "./pages/protected/user/booking/Booking";
 import Transactions from "./pages/protected/user/transaction/Transaction";
 import History from "./pages/protected/user/history/History";
 import Settings from "./pages/protected/user/settings/Settings";
+
+//---------------Admin pages import------------------------
+import Admin from "./pages/protected/admin";
+import Dashboard from "./pages/protected/admin/dashboard/Dashboard";
+import AdminHistory from "./pages/protected/admin/history/History";
+import AdminSettings from "./pages/protected/admin/settings/Settings";
+
+//---------------SuperAdmin pages import-------------------
+import Superadmin from "./pages/protected/superadmin";
+import SuperAdminDashboard from "./pages/protected/superadmin/dashboard/Dashboard";
+import CreateAdmin from "./pages/protected/superadmin/createAdmin/CreateAdmin";
+import SuperAdminHistory from "./pages/protected/superadmin/history/History";
+import SuperAdminSettings from "./pages/protected/superadmin/settings/Settings";
 
 const App = () => {
   return (
@@ -48,7 +65,10 @@ const App = () => {
             </AuthorizationRoute>
           }
         >
-          <Route path="/admin/comming" element={<CommingSoon />} />
+          <Route index element={<Dashboard />} />
+          <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route path="/admin/history" element={<AdminHistory />} />
+          <Route path="/admin/settings" element={<AdminSettings />} />
         </Route>
         <Route
           path="/superadmin"
@@ -57,7 +77,16 @@ const App = () => {
               <Superadmin />
             </AuthorizationRoute>
           }
-        ></Route>
+        >
+          <Route index element={<SuperAdminDashboard />} />
+          <Route
+            path="/superadmin/dashboard"
+            element={<SuperAdminDashboard />}
+          />
+          <Route path="/superadmin/createadmin" element={<CreateAdmin />} />
+          <Route path="/superadmin/history" element={<SuperAdminHistory />} />
+          <Route path="/superadmin/settings" element={<SuperAdminSettings />} />
+        </Route>
       </Routes>
     </div>
   );
