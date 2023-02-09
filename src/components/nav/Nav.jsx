@@ -18,7 +18,7 @@ const Nav = () => {
     store.dispatch(loginAction(null));
     // navigate("/login");
   };
-
+  console.log(user?.user?.role);
   return (
     <div className="Nav_container">
       <div
@@ -41,7 +41,15 @@ const Nav = () => {
             <Link to="/comming">Flights</Link>
           </li>
           <li className="Nav_right_list4">
-            <Link to="/comming">Bookings</Link>
+            {user?.user?.role === "user" && (
+              <Link to="/user/booking">Bookings</Link>
+            )}
+            {user?.user?.role === "admin" && (
+              <Link to="/admin/dashboard">Dashboard</Link>
+            )}
+            {user?.user?.role === "super_admin" && (
+              <Link to="/superadmin/dashboard">Dashboard</Link>
+            )}
           </li>
           <li className="Nav_right_list5">
             <Link to="/comming">Contact Us</Link>
@@ -84,7 +92,15 @@ const Nav = () => {
               <Link to="/comming">Flights</Link>
             </li>
             <li className="Nav_right_list4">
-              <Link to="/comming">Bookings</Link>
+              {user?.user?.role === "user" && (
+                <Link to="/user/booking">Bookings</Link>
+              )}
+              {user?.user?.role === "admin" && (
+                <Link to="/admin/dashboard">Dashboard</Link>
+              )}
+              {user?.user?.role === "super_admin" && (
+                <Link to="/superadmin/dashboard">Dashbaord</Link>
+              )}
             </li>
             <li className="Nav_right_list5">
               <Link to="/comming">Contact Us</Link>
