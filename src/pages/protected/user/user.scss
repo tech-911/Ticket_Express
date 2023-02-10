@@ -36,6 +36,9 @@
           font-weight: 600;
           font-size: 22px;
           color: rgba(30, 30, 30, 0.8);
+          @media screen and (max-width: 850px) {
+            margin-top: 1rem;
+          }
         }
         .user_nav_text2 {
           font-family: "Poppins";

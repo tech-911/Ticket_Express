@@ -91,6 +91,10 @@
       align-items: flex-start;
       justify-content: space-between;
       gap: 1rem;
+      @media screen and (max-width: 575px) {
+        @include flex-col;
+
+      }
       .booking_time {
         width: 100%;
         @include flex-col;
