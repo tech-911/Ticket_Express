@@ -28,6 +28,7 @@ import AdminSettings from "./pages/protected/admin/settings/Settings";
 //---------------SuperAdmin pages import-------------------
 import Superadmin from "./pages/protected/superadmin";
 import SuperAdminDashboard from "./pages/protected/superadmin/dashboard/Dashboard";
+import Details from "./pages/protected/superadmin/dashboard/Details";
 import CreateAdmin from "./pages/protected/superadmin/createAdmin/CreateAdmin";
 import SuperAdminHistory from "./pages/protected/superadmin/history/History";
 import SuperAdminSettings from "./pages/protected/superadmin/settings/Settings";
@@ -83,6 +84,8 @@ const App = () => {
             path="/superadmin/dashboard"
             element={<SuperAdminDashboard />}
           />
+          <Route path="/superadmin/details" element={<Details />} />
+
           <Route path="/superadmin/createadmin" element={<CreateAdmin />} />
           <Route path="/superadmin/history" element={<SuperAdminHistory />} />
           <Route path="/superadmin/settings" element={<SuperAdminSettings />} />

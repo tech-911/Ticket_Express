@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./dashboard.scss";
-// import { data } from "../../../../functionalities/bookingsData";
 import { useSelector, useDispatch } from "react-redux";
 import { bookingsAction } from "../../../../redux/actionCreators/bookings/bookingsAction";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const { token } = useSelector((state) => state.login);
@@ -13,6 +13,7 @@ const Dashboard = () => {
   const [users, setUsers] = useState(null);
   const [admins, setAdmins] = useState(null);
   const [requests, setRequests] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -21,7 +22,7 @@ const Dashboard = () => {
       })
       .then((res) => {
         dispatch(bookingsAction(res?.data));
-        setData(bookingData);
+        setData(res?.data);
       })
       .catch((err) => {
         console.log(err);
@@ -65,7 +66,6 @@ const Dashboard = () => {
         console.log(err);
       });
   }, []);
-  const bookingData = useSelector((state) => state.bookings);
 
   return (
     <div className="logs_wrapper overflow-x-hidden p-[2rem]">
@@ -107,10 +107,13 @@ const Dashboard = () => {
             </p>
           </div>
           <div className="logs_content">
-            {data?.map((value) => {
+            {data?.map((value, id) => {
               return (
                 <div
-                  key={value.id}
+                  onClick={() => {
+                    navigate(`/superadmin/details`, { state: value });
+                  }}
+                  key={id}
                   className="cursor-pointer grid gap-3 mb-4 logs_item1 border-b-2 border-[#6c99c411] pb-4"
                 >
                   <p className="justify-self-start text-[#7e7d7d] col-span-3">

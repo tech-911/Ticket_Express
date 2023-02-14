@@ -36,7 +36,7 @@ const Booking = () => {
           destination: data.destination,
           passangers_number: Number(data.passangers_number),
           time: data.time,
-          date: data.date,
+          date: `${data.date}T${data.time}`,
           car_type: data.car_type,
         },
         { headers: { "auth-token": token } }
