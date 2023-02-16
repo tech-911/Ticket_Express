@@ -18,6 +18,8 @@ const Booking = () => {
     car_type: "",
   });
   const { token } = useSelector((state) => state.login);
+  const { user } = useSelector((state) => state.login);
+  const { _id } = user;
 
   //---------------Variables------------------------
   const baseUrl = "https://ticketappbackend.vercel.app/api/useraction";
@@ -38,6 +40,7 @@ const Booking = () => {
           time: data.time,
           date: `${data.date}T${data.time}`,
           car_type: data.car_type,
+          user_id: _id,
         },
         { headers: { "auth-token": token } }
       );
@@ -77,6 +80,7 @@ const Booking = () => {
   return (
     <div className="booking_wrapper">
       <ToastContainer />
+
       <form
         onSubmit={(e) => {
           handleSubmit(e);
@@ -185,6 +189,7 @@ const Booking = () => {
             placeholder="Enter number of passangers"
             id="passangers_number"
             type="number"
+            min="1"
             className="booking_no_input"
             required
             value={passangers_number}

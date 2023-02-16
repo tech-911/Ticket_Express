@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { store } from "../../redux/store";
 import { loginAction } from "../../redux/actionCreators/login/loginAction";
+import { bookingsAction } from "../../redux/actionCreators/bookings/bookingsAction";
 
 const Nav = () => {
   const user = useSelector((state) => state.login);
@@ -16,6 +17,7 @@ const Nav = () => {
   const [hamburger, setHamburger] = useState(0);
   const handleLogout = () => {
     store.dispatch(loginAction(null));
+    store.dispatch(bookingsAction(null));
     // navigate("/login");
   };
   console.log(user?.user?.role);

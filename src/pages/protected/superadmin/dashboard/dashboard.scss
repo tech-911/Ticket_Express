@@ -61,10 +61,31 @@
       }
     }
   }
+  .logs_empty_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    .logs_empty_text {
+      margin-top: 1rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 160%;
+      color: #333333;
+      text-align: center;
+    }
+  }
+
   .logs_widget {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
+    .logs_header_text_shadow {
+      text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.47);
+    }
     .logs_table {
       @media screen and (max-width: 587px) {
         margin-left: 2rem;
@@ -77,11 +98,11 @@
         height: 10px;
       }
       &::-webkit-scrollbar-thumb {
-        background: #2f81cd;
+        background: #df69518c;
         border-radius: 8px;
         border: 2px solid #e0e0e0;
         &:hover {
-          background-color: #00468a;
+          background-color: #df6951;
         }
       }
       .logs_title {
@@ -104,6 +125,12 @@
           }
           grid-template-columns: repeat(11, minmax(0, 1fr));
           justify-items: center;
+          &:hover {
+            background-color: #fcefec;
+            * {
+              color: #7e7d7db6;
+            }
+          }
         }
       }
     }

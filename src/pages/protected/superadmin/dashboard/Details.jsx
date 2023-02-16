@@ -7,11 +7,14 @@ import { useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+
 const Details = () => {
   const [disable, setDisable] = useState(0);
   const [accept, setAccept] = useState(0);
   const [decline, setDecline] = useState(0);
   const { state } = useLocation();
+  const { value, id } = state;
+  console.log(value, id);
   const navigate = useNavigate();
   const {
     car_type,
@@ -20,11 +23,9 @@ const Details = () => {
     email,
     name,
     passangers_number,
-    no,
-    time,
     _id,
     status,
-  } = state;
+  } = value;
   const { token } = useSelector((state) => state.login);
   const baseUrl = "https://ticketappbackend.vercel.app/api/useraction";
   const formatAMPM = (date) => {
@@ -65,6 +66,7 @@ const Details = () => {
       toast.success(`Trip ${statusValue}`, {
         position: toast.POSITION.TOP_RIGHT,
       });
+
       navigate("/superadmin/dashboard");
     } catch (err) {
       setDisable(0);
@@ -78,7 +80,7 @@ const Details = () => {
     setDecline(0);
     setAccept(0);
   };
-  
+
   return (
     <div className="detail_wrapper">
       <ToastContainer />
