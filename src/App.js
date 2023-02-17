@@ -18,10 +18,12 @@ import Booking from "./pages/protected/user/booking/Booking";
 import Transactions from "./pages/protected/user/transaction/Transaction";
 import History from "./pages/protected/user/history/History";
 import Settings from "./pages/protected/user/settings/Settings";
+import DetailsTransaction from "./pages/protected/user/transaction/DetailsTransaction";
 
 //---------------Admin pages import------------------------
 import Admin from "./pages/protected/admin";
 import Dashboard from "./pages/protected/admin/dashboard/Dashboard";
+import AdminDetails from "./pages/protected/admin/dashboard/Details";
 import AdminHistory from "./pages/protected/admin/history/History";
 import AdminSettings from "./pages/protected/admin/settings/Settings";
 
@@ -54,6 +56,7 @@ const App = () => {
         >
           <Route index element={<Booking />} />
           <Route path="/user/booking" element={<Booking />} />
+          <Route path="/user/details" element={<DetailsTransaction />} />
           <Route path="/user/transaction" element={<Transactions />} />
           <Route path="/user/history" element={<History />} />
           <Route path="/user/settings" element={<Settings />} />
@@ -70,6 +73,7 @@ const App = () => {
           <Route path="/admin/dashboard" element={<Dashboard />} />
           <Route path="/admin/history" element={<AdminHistory />} />
           <Route path="/admin/settings" element={<AdminSettings />} />
+          <Route path="/admin/details" element={<AdminDetails />} />
         </Route>
         <Route
           path="/superadmin"

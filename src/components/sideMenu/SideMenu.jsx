@@ -11,6 +11,8 @@ const SideMenu = ({ link, name, icon, id }) => {
     if (user.role === "user") {
       if (location.pathname.includes("/user/booking")) {
         setActive(0);
+      } else if (location.pathname === "/user") {
+        setActive(0);
       } else if (location.pathname.includes("/user/transaction")) {
         setActive(1);
       } else if (location.pathname.includes("/user/history")) {
@@ -21,6 +23,8 @@ const SideMenu = ({ link, name, icon, id }) => {
     } else if (user.role === "admin") {
       if (location.pathname.includes("/admin/dashboard")) {
         setActive(0);
+      } else if (location.pathname === "/admin") {
+        setActive(0);
       } else if (location.pathname.includes("/admin/history")) {
         setActive(1);
       } else if (location.pathname.includes("/admin/settings")) {
@@ -28,6 +32,8 @@ const SideMenu = ({ link, name, icon, id }) => {
       }
     } else if (user.role === "super_admin") {
       if (location.pathname.includes("/superadmin/dashboard")) {
+        setActive(0);
+      } else if (location.pathname === "/superadmin") {
         setActive(0);
       } else if (location.pathname.includes("/superadmin/createadmin")) {
         setActive(1);
