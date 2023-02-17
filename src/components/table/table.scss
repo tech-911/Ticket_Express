@@ -19,16 +19,16 @@
       }
 
       &::-webkit-scrollbar {
-        background: #e0e0e0;
+        background: #fcefec;
         border-radius: 8px;
         height: 10px;
       }
       &::-webkit-scrollbar-thumb {
-        background: #df69518c;
+        background: #e0e0e0;
         border-radius: 8px;
-        border: 2px solid #e0e0e0;
+        border: 2px solid #fcefec;
         &:hover {
-          background-color: #df6951;
+          background-color: #d4c2c2;
         }
       }
       .table_title {

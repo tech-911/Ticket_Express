@@ -1,20 +1,22 @@
 import React, { useState } from "react";
-import "./transactiondetials.scss";
+import "./transactionDetails.scss";
 import { useLocation } from "react-router-dom";
 import { TiArrowBack } from "react-icons/ti";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { GoTrashcan } from "react-icons/go";
 import axios from "axios";
+import Modal from "../../../../components/Modal/Modal";
 
 const DetailsTransaction = () => {
   const [disable, setDisable] = useState(0);
   const [accept, setAccept] = useState(0);
   const [decline, setDecline] = useState(0);
+  const [modal, setModal] = useState(0);
   const { state } = useLocation();
   const { value, id } = state;
-  console.log(value, id);
   const navigate = useNavigate();
   const {
     car_type,
@@ -28,6 +30,7 @@ const DetailsTransaction = () => {
   } = value;
   const { token } = useSelector((state) => state.login);
   const baseUrl = "https://ticketappbackend.vercel.app/api/useraction";
+
   const formatAMPM = (date) => {
     // date = new Date(date);
     // var hours = date.getHours();
@@ -52,87 +55,126 @@ const DetailsTransaction = () => {
     // statusValue === "accepted" ? setAccept(1) : setAccept(0);
     // statusValue === "declined" ? setDecline(1) : setDecline(0);
     // setDisable(1);
-
     // setDisable(0);
     // setDecline(0);
     // setAccept(0);
   };
+  const handleDelete = async () => {
+    setDisable(1);
+    try {
+      await axios.request({
+        url: `${baseUrl}/deletebooking`,
+        method: "delete",
+        headers: {
+          "auth-token": token,
+        },
+        data: {
+          _id: _id,
+        },
+      });
+      setDisable(0);
+      setModal(0);
+      navigate("/user/transaction");
+    } catch (err) {
+      setDisable(0);
+      setModal(0);
+      toast.error(`Error: ${err.response.data}`, {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    }
+  };
 
   return (
-    <div className="detail_wrapper">
+    <div className="transactionDetail_wrapper">
       <ToastContainer />
+      <Modal
+        modal={modal}
+        setModal={setModal}
+        Header="Delete Booking"
+        actionText="delete"
+        actionMethod={handleDelete}
+        text="delete this booking"
+      />
       <div
         onClick={() => {
           navigate(-1);
         }}
-        className="detail_back"
+        className="transactionDetail_back"
       >
-        <div className="detail_back_icon">
-          <TiArrowBack className="detail_back_icon1" />
+        <div className="transactionDetail_back_icon">
+          <TiArrowBack className="transactionDetail_back_icon1" />
         </div>
-        <p className="detial_back_text">Back</p>
+        <p className="transactionDetail_back_text">Back</p>
       </div>
-      <div className="detial_widget">
-        <div className="detial_name">
-          <p className="detial_name_label">Name:</p>
-          <p className="detial_name_value">{name}</p>
+      <div className="transactionDetail_widget">
+        <button
+          disabled={disable}
+          onClick={() => {
+            setModal(!modal);
+          }}
+          className="transactionDetail_delete"
+        >
+          <GoTrashcan className="transactionDetail_delete_icon" />
+        </button>
+
+        <div className="transactionDetail_name">
+          <p className="transactionDetail_name_label">Name:</p>
+          <p className="transactionDetail_name_value">{name}</p>
         </div>
-        <div className="detial_email">
-          <p className="detial_email_label">Email:</p>
-          <p className="detial_email_value">{email}</p>
+        <div className="transactionDetail_email">
+          <p className="transactionDetail_email_label">Email:</p>
+          <p className="transactionDetail_email_value">{email}</p>
         </div>
-        <div className="detial_date">
-          <p className="detial_date_label">Date:</p>
-          <p className="detial_date_value">{date.split("T")[0]}</p>
+        <div className="transactionDetail_date">
+          <p className="transactionDetail_date_label">Date:</p>
+          <p className="transactionDetail_date_value">{date.split("T")[0]}</p>
         </div>
-        <div className="detial_time">
-          <p className="detial_time_label">Time:</p>
-          <p className="detial_time_value">{formatAMPM(date)}</p>
+        <div className="transactionDetail_time">
+          <p className="transactionDetail_time_label">Time:</p>
+          <p className="transactionDetail_time_value">{formatAMPM(date)}</p>
         </div>
-        <div className="detial_status">
-          <p className="detial_status_label">Status:</p>
+        <div className="transactionDetail_status">
+          <p className="transactionDetail_status_label">Status:</p>
           {status === "pending" && (
-            <p className="text-[#eea13d] detial_status_value">{status}</p>
+            <p className="text-[#eea13d] transactionDetail_status_value">
+              {status}
+            </p>
           )}
           {status === "declined" && (
-            <p className="text-[#b93737] detial_status_value">{status}</p>
+            <p className="text-[#b93737] transactionDetail_status_value">
+              {status}
+            </p>
           )}
           {status === "accepted" && (
-            <p className="text-[#32a542] detial_status_value">{status}</p>
+            <p className="text-[#32a542] transactionDetail_status_value">
+              {status}
+            </p>
           )}
         </div>
-        <div className="detial_no">
-          <p className="detial_no_label">Numbers of Passangers:</p>
-          <p className="detial_no_value">{passangers_number}</p>
+        <div className="transactionDetail_no">
+          <p className="transactionDetail_no_label">Numbers of Passangers:</p>
+          <p className="transactionDetail_no_value">{passangers_number}</p>
         </div>
-        <div className="detial_destination">
-          <p className="detial_destination_label">Destination:</p>
-          <p className="detial_destination_value">{destination}</p>
+        <div className="transactionDetail_destination">
+          <p className="transactionDetail_destination_label">Destination:</p>
+          <p className="transactionDetail_destination_value">{destination}</p>
         </div>
-        <div className="detial_car">
-          <p className="detial_car_label">Car Type:</p>
-          <p className="detial_car_value">{car_type}</p>
+        <div className="transactionDetail_car">
+          <p className="transactionDetail_car_label">Car Type:</p>
+          <p className="transactionDetail_car_value">{car_type}</p>
         </div>
-        <div className="detail_button">
-          <button
-            disabled={disable}
-            onClick={() => {
-              handleStatus("accepted");
-            }}
-            className="detail_button1"
-          >
-            {accept ? "Accepting..." : "Accept"}
-          </button>
-          <button
-            disabled={disable}
-            onClick={() => {
-              handleStatus("declined");
-            }}
-            className="detail_button2"
-          >
-            {decline ? "Declining..." : "Decline"}
-          </button>
-        </div>
+        {status === "accepted" && (
+          <div className="transactionDetail_button">
+            <button
+              onClick={() => {
+                handleStatus("declined");
+              }}
+              className="transactionDetail_button2"
+            >
+              Proceed to Payment
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

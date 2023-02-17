@@ -45,14 +45,15 @@
   color: white;
 }
 
-.detail_wrapper {
+.transactionDetail_wrapper {
   padding: 2rem;
-  .detail_back {
+  .transactionDetail_back {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 2rem;
-    .detail_back_icon {
+    width: fit-content;
+    .transactionDetail_back_icon {
       background: #ffffff;
       box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
       border-radius: 50%;
@@ -68,12 +69,12 @@
         height: 3.6rem;
       }
       cursor: pointer;
-      .detail_back_icon1 {
+      .transactionDetail_back_icon1 {
         font-size: 1.7rem;
         color: rgba(30, 30, 30, 0.8);
       }
     }
-    .detial_back_text {
+    .transactionDetail_back_text {
       cursor: pointer;
       margin-left: 1.5rem;
       font-family: "Inter";
@@ -84,87 +85,98 @@
       color: rgba(30, 30, 30, 0.8);
     }
   }
-  .detial_widget {
+  .transactionDetail_widget {
     background: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     padding: 2.5rem 3rem;
     margin-bottom: 3rem;
     overflow: hidden;
-    .detial_name {
+    position: relative;
+    .transactionDetail_delete {
+      position: absolute;
+      right: 3rem;
+      top: 2.5rem;
+      cursor: pointer;
+      .transactionDetail_delete_icon {
+        font-size: 1.5rem;
+        color: #c71515;
+      }
+    }
+    .transactionDetail_name {
       @include text_align;
-      .detial_name_label {
+      .transactionDetail_name_label {
         @include text_label;
       }
-      .detial_name_value {
+      .transactionDetail_name_value {
         @include text_value;
       }
     }
-    .detial_email {
+    .transactionDetail_email {
       @include text_align;
-      .detial_email_label {
+      .transactionDetail_email_label {
         @include text_label;
       }
-      .detial_email_value {
+      .transactionDetail_email_value {
         @include text_value;
         word-break: break-all;
       }
     }
-    .detial_date {
+    .transactionDetail_date {
       @include text_align;
-      .detial_date_label {
+      .transactionDetail_date_label {
         @include text_label;
       }
-      .detial_date_value {
+      .transactionDetail_date_value {
         @include text_value;
       }
     }
-    .detial_time {
+    .transactionDetail_time {
       @include text_align;
-      .detial_time_label {
+      .transactionDetail_time_label {
         @include text_label;
       }
-      .detial_time_value {
+      .transactionDetail_time_value {
         @include text_value;
       }
     }
-    .detial_status {
+    .transactionDetail_status {
       @include text_align;
-      .detial_status_label {
+      .transactionDetail_status_label {
         @include text_label;
       }
-      .detial_status_value {
+      .transactionDetail_status_value {
         @include text_value;
       }
     }
-    .detial_no {
+    .transactionDetail_no {
       @include text_align;
-      .detial_no_label {
+      .transactionDetail_no_label {
         @include text_label;
       }
-      .detial_no_value {
+      .transactionDetail_no_value {
         @include text_value;
       }
     }
-    .detial_destination {
+    .transactionDetail_destination {
       @include text_align;
-      .detial_destination_label {
+      .transactionDetail_destination_label {
         @include text_label;
       }
-      .detial_destination_value {
+      .transactionDetail_destination_value {
         @include text_value;
       }
     }
-    .detial_car {
+    .transactionDetail_car {
       @include text_align;
-      .detial_car_label {
+      .transactionDetail_car_label {
         @include text_label;
       }
-      .detial_car_value {
+      .transactionDetail_car_value {
         @include text_value;
       }
     }
-    .detail_button {
+    .transactionDetail_button {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
@@ -176,13 +188,13 @@
         flex-direction: column;
         gap: 1rem;
       }
-      .detail_button1 {
+      .transactionDetail_button1 {
         @include button;
         background: #14a821;
       }
-      .detail_button2 {
+      .transactionDetail_button2 {
         @include button;
-        background: #c71515;
+        background: #df6951;
       }
     }
   }

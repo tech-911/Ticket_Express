@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
-const DeleteModal = ({
+const Modal = ({
   modal,
   setModal,
   Header,
@@ -25,7 +25,7 @@ const DeleteModal = ({
       <div className={styles.Delete_box}>
         <h1 className={styles.Delete_head}>{Header}</h1>
         <p className={styles.Delete_text}>
-          Are you sure you want to {text} task?
+          Are you sure you want to {text}?
         </p>
         <div className={styles.Delete_buttons}>
           <button
@@ -49,4 +49,4 @@ const DeleteModal = ({
   );
 };
 
-export default DeleteModal;
+export default Modal;
