@@ -19,6 +19,7 @@ import Transactions from "./pages/protected/user/transaction/Transaction";
 import History from "./pages/protected/user/history/History";
 import Settings from "./pages/protected/user/settings/Settings";
 import DetailsTransaction from "./pages/protected/user/transaction/DetailsTransaction";
+import Paystack from "./components/paystack/PayStack";
 
 //---------------Admin pages import------------------------
 import Admin from "./pages/protected/admin";
@@ -57,6 +58,7 @@ const App = () => {
           <Route index element={<Booking />} />
           <Route path="/user/booking" element={<Booking />} />
           <Route path="/user/details" element={<DetailsTransaction />} />
+          <Route path="/user/paystack" element={<Paystack />} />
           <Route path="/user/transaction" element={<Transactions />} />
           <Route path="/user/history" element={<History />} />
           <Route path="/user/settings" element={<Settings />} />

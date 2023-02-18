@@ -95,6 +95,7 @@ const DetailsTransaction = () => {
         actionMethod={handleDelete}
         text="delete this booking"
       />
+
       <div
         onClick={() => {
           navigate(-1);
@@ -167,7 +168,9 @@ const DetailsTransaction = () => {
           <div className="transactionDetail_button">
             <button
               onClick={() => {
-                handleStatus("declined");
+                navigate(`/user/paystack`, {
+                  state: { value },
+                });
               }}
               className="transactionDetail_button2"
             >
