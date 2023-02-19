@@ -62,6 +62,8 @@ const Transaction = () => {
 
   return (
     <div>
+      <h1 className="transaction_head_title">View Transactions</h1>
+
       {pending.length !== 0 && (
         <div className="px-[2rem] mb-4">
           <Table data={pending} status="Pending" detailUrl="/user/details" />

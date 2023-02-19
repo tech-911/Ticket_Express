@@ -4,6 +4,8 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./paystack.scss";
 
 const Paystack = () => {
@@ -42,12 +44,14 @@ const Paystack = () => {
   };
 
   const onClose = () => {
-    alert("Payment closed");
+    toast.info(`Payment closed`, {
+      position: toast.POSITION.TOP_RIGHT,
+    });
   };
 
   const paystackProps = {
     email,
-    amount,
+    amount: amount * 100,
     publicKey,
     metadata: {
       name,
@@ -59,6 +63,7 @@ const Paystack = () => {
 
   return (
     <div className="paystack_wrapper">
+      <ToastContainer />
       <div className="paystack_form">
         <h1 className="paystack_form_heading">Paystack Form</h1>
         <div className="paystack_name">

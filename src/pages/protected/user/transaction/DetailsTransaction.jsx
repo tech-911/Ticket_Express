@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { GoTrashcan } from "react-icons/go";
 import axios from "axios";
 import Modal from "../../../../components/Modal/Modal";
+import Transaction from "./Transaction";
 
 const DetailsTransaction = () => {
   const [disable, setDisable] = useState(0);
@@ -151,6 +152,11 @@ const DetailsTransaction = () => {
               {status}
             </p>
           )}
+          {status === "paid" && (
+            <p className="text-[#714DD9] transactionDetail_status_value">
+              {status}
+            </p>
+          )}
         </div>
         <div className="transactionDetail_no">
           <p className="transactionDetail_no_label">Numbers of Passangers:</p>
@@ -164,6 +170,28 @@ const DetailsTransaction = () => {
           <p className="transactionDetail_car_label">Car Type:</p>
           <p className="transactionDetail_car_value">{car_type}</p>
         </div>
+        {status === "paid" && (
+          <div>
+            <div className="transactionDetail_car">
+              <p className="transactionDetail_car_label">Payment Status:</p>
+              <p className="transactionDetail_car_value">
+                {value?.data?.transaction_id?.message}
+              </p>
+            </div>
+            <div className="transactionDetail_car">
+              <p className="transactionDetail_car_label">Reference:</p>
+              <p className="transactionDetail_car_value">
+                {value?.data?.transaction_id?.reference}
+              </p>
+            </div>
+            <div className="transactionDetail_car">
+              <p className="transactionDetail_car_label">Transaction Id:</p>
+              <p className="transactionDetail_car_value">
+                {value?.data?.transaction_id?.trans}
+              </p>
+            </div>
+          </div>
+        )}
         {status === "accepted" && (
           <div className="transactionDetail_button">
             <button

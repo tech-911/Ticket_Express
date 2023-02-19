@@ -22,9 +22,9 @@ const Table = ({ data, status, detailUrl }) => {
               className="cursor-pointer border-[1px] border-[#714DD9] rounded-l-md flex flex-row items-center h-full"
             >
               {dropDown ? (
-                <MdKeyboardArrowDown className="text-[2.5rem] text-[#714DD9]" />
-              ) : (
                 <MdKeyboardArrowUp className="text-[2.5rem] text-[#714DD9]" />
+              ) : (
+                <MdKeyboardArrowDown className="text-[2.5rem] text-[#714DD9]" />
               )}
             </div>
             <div className="bg-[#714DD9] rounded-r-md h-full px-3 flex flex-row items-center">
@@ -43,9 +43,9 @@ const Table = ({ data, status, detailUrl }) => {
               className="cursor-pointer border-[1px] border-[#52C41A] rounded-l-md flex flex-row items-center h-full"
             >
               {dropDown ? (
-                <MdKeyboardArrowDown className="text-[2.5rem] text-[#52C41A]" />
-              ) : (
                 <MdKeyboardArrowUp className="text-[2.5rem] text-[#52C41A]" />
+              ) : (
+                <MdKeyboardArrowDown className="text-[2.5rem] text-[#52C41A]" />
               )}
             </div>
             <div className="bg-[#52C41A] rounded-r-md h-full px-3 flex flex-row items-center">
@@ -61,15 +61,36 @@ const Table = ({ data, status, detailUrl }) => {
               onClick={() => {
                 setDropDown(!dropDown);
               }}
-              className="cursor-pointer border-[1px] border-[#FF4D4F] rounded-l-md flex flex-row items-center h-full"
+              className="cursor-pointer border-[1px] border-[red] rounded-l-md flex flex-row items-center h-full"
             >
               {dropDown ? (
-                <MdKeyboardArrowDown className="text-[2.5rem] text-[#FF4D4F]" />
+                <MdKeyboardArrowUp className="text-[2.5rem] text-[red]" />
               ) : (
-                <MdKeyboardArrowUp className="text-[2.5rem] text-[#FF4D4F]" />
+                <MdKeyboardArrowDown className="text-[2.5rem] text-[red]" />
               )}
             </div>
-            <div className="bg-[#df6951] rounded-r-md h-full px-3 flex flex-row items-center">
+            <div className="bg-[red] rounded-r-md h-full px-3 flex flex-row items-center">
+              <p className="text-[white] text-[18px] font-[Poppins] ">
+                {status}
+              </p>
+            </div>
+          </div>
+        )}
+        {status === "Paid" && (
+          <div className="mx-[2rem] my-7 h-[40px] flex flex-row items-center">
+            <div
+              onClick={() => {
+                setDropDown(!dropDown);
+              }}
+              className="cursor-pointer border-[1px] border-[#eea13d] rounded-l-md flex flex-row items-center h-full"
+            >
+              {dropDown ? (
+                <MdKeyboardArrowUp className="text-[2.5rem] text-[#eea13d]" />
+              ) : (
+                <MdKeyboardArrowDown className="text-[2.5rem] text-[#eea13d]" />
+              )}
+            </div>
+            <div className="bg-[#eea13d] rounded-r-md h-full px-3 flex flex-row items-center">
               <p className="text-[white] text-[18px] font-[Poppins] ">
                 {status}
               </p>

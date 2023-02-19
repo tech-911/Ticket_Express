@@ -7,7 +7,7 @@ const About = () => {
       <div className="about_heading">About ticket xpress</div>
       <div className="about_body_wrap">
         <h1 className="about_left_text">
-          Cheap flights, Train and Affordable Bus Tickets.
+          Cheap and Affordable Tickets for your Vehicle Transport
         </h1>
         <p className="about_right_text">
           We are a Nigerian travel booking agency with thousands of travellers

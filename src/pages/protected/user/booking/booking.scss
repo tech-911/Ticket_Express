@@ -35,6 +35,14 @@
 .booking_wrapper {
   // height: 100%;
   padding: 2rem;
+  .booking_head_title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: rgba(30, 30, 30, 0.8);
+    margin-bottom: 1.5rem
+  }
   .booking_form {
     @include flex-col;
     .booking_name {

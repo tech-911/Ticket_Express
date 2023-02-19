@@ -1,6 +1,5 @@
 import { GoDashboard } from "react-icons/go";
-import { MdAddModerator } from "react-icons/md";
-import { AiOutlineHistory } from "react-icons/ai";
+import { MdAddModerator, MdPayments } from "react-icons/md";
 import { FiSettings } from "react-icons/fi";
 export const superAdminSideData = [
   {
@@ -17,8 +16,8 @@ export const superAdminSideData = [
   },
   {
     id: 2,
-    name: "History",
-    icon: <AiOutlineHistory className="icon2" />,
+    name: "Payments",
+    icon: <MdPayments className="icon2" />,
     link: "/superadmin/history",
   },
   {

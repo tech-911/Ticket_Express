@@ -18,6 +18,10 @@
     }
     .superadmin_nav {
       padding: 3rem 2rem 1rem;
+      @media screen and (max-width: 850px) {
+        display: flex;
+        align-items: flex-start;
+      }
       .superadmin_hamburger {
         font-size: 2rem;
         color: #df6951;
@@ -36,8 +40,8 @@
           font-weight: 600;
           font-size: 22px;
           color: rgba(30, 30, 30, 0.8);
-           @media screen and (max-width: 850px) {
-            margin-top: 1rem;
+          @media screen and (max-width: 850px) {
+            margin-left: 1rem;
           }
         }
         .superadmin_nav_text2 {

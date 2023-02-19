@@ -1,8 +1,18 @@
+.transaction_head_title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: rgba(30, 30, 30, 0.8);
+  margin: 2rem 2rem;
+}
+
 .transaction_empty_wrapper {
   @media screen and (max-width: 416px) {
     margin-left: 2rem;
     margin-right: 2rem;
   }
+
   .transaction_empty_text {
     .transaction_empty_head {
       font-family: "Poppins";

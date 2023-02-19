@@ -69,6 +69,8 @@ const Dashboard = () => {
 
   return (
     <div className="logs_wrapper overflow-x-hidden p-[2rem]">
+      <h1 className="admindashboard_head_title">Admin Dashboard</h1>
+
       <div className="dashboard_HUD">
         <div className="dashboard_HUD_item1">
           <p className="dashboard_HUD_item1_text">Total Admin</p>

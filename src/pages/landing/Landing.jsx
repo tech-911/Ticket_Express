@@ -8,8 +8,10 @@ import Services from "./services/Services";
 import About from "./about/About";
 import Subscribe from "./subscribe/Subscribe";
 import Footer from "../../components/footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
+  const navigate = useNavigate();
   return (
     <div className="landing_wrapper">
       <div className="landing_section1">
@@ -35,7 +37,14 @@ const Landing = () => {
             bookings to your preffered location easily accessible fro thr
             comfort of your home.
           </p>
-          <button className="landing_hero_button">Book</button>
+          <button
+            onClick={() => {
+              navigate("/login");
+            }}
+            className="landing_hero_button"
+          >
+            Book
+          </button>
         </div>
       </div>
       <div className="landing_section2">

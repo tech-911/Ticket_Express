@@ -14,7 +14,6 @@ const Details = () => {
   const [decline, setDecline] = useState(0);
   const { state } = useLocation();
   const { value, id } = state;
-  console.log(value, id);
   const navigate = useNavigate();
   const {
     car_type,
@@ -123,6 +122,9 @@ const Details = () => {
           {status === "accepted" && (
             <p className="text-[#32a542] detial_status_value">{status}</p>
           )}
+          {status === "paid" && (
+            <p className="text-[purple] detial_status_value">{status}</p>
+          )}
         </div>
         <div className="detial_no">
           <p className="detial_no_label">Numbers of Passangers:</p>
@@ -136,26 +138,50 @@ const Details = () => {
           <p className="detial_car_label">Car Type:</p>
           <p className="detial_car_value">{car_type}</p>
         </div>
-        <div className="detail_button">
-          <button
-            disabled={disable}
-            onClick={() => {
-              handleStatus("accepted");
-            }}
-            className="detail_button1"
-          >
-            {accept ? "Accepting..." : "Accept"}
-          </button>
-          <button
-            disabled={disable}
-            onClick={() => {
-              handleStatus("declined");
-            }}
-            className="detail_button2"
-          >
-            {decline ? "Declining..." : "Decline"}
-          </button>
-        </div>
+        {status === "paid" && (
+          <div>
+            <div className="detial_car">
+              <p className="detial_car_label">Payment Status:</p>
+              <p className="detial_car_value text-[#4bb64b]">
+                {value?.data?.transaction_id?.message}
+              </p>
+            </div>
+            <div className="detial_car">
+              <p className="detial_car_label">Reference:</p>
+              <p className="detial_car_value">
+                {value?.data?.transaction_id?.reference}
+              </p>
+            </div>
+            <div className="detial_car">
+              <p className="detial_car_label">Transaction Id:</p>
+              <p className="detial_car_value text-[#4bb64b]">
+                {value?.data?.transaction_id?.trans}
+              </p>
+            </div>
+          </div>
+        )}
+        {status === "pending" && (
+          <div className="detail_button">
+            <button
+              disabled={disable}
+              onClick={() => {
+                handleStatus("accepted");
+              }}
+              className="detail_button1"
+            >
+              {accept ? "Accepting..." : "Accept"}
+            </button>
+            <button
+              disabled={disable}
+              onClick={() => {
+                handleStatus("declined");
+              }}
+              className="detail_button2"
+            >
+              {decline ? "Declining..." : "Decline"}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

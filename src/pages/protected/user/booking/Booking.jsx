@@ -80,7 +80,7 @@ const Booking = () => {
   return (
     <div className="booking_wrapper">
       <ToastContainer />
-
+      <h1 className="booking_head_title">Create Booking</h1>
       <form
         onSubmit={(e) => {
           handleSubmit(e);

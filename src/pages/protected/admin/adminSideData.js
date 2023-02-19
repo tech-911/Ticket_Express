@@ -1,5 +1,5 @@
 import { GoDashboard } from "react-icons/go";
-import { AiOutlineHistory } from "react-icons/ai";
+import { MdPayments } from "react-icons/md";
 import { FiSettings } from "react-icons/fi";
 export const adminSideData = [
   {
@@ -10,8 +10,8 @@ export const adminSideData = [
   },
   {
     id: 1,
-    name: "History",
-    icon: <AiOutlineHistory className="icon2" />,
+    name: "Payments",
+    icon: <MdPayments className="icon2" />,
     link: "/admin/history",
   },
   {

@@ -18,7 +18,6 @@ const CreateAdmin = () => {
   // const baseUrl = "http://localhost:4000/api/user";
   const baseUrl = "https://ticketappbackend.vercel.app/api/user";
 
-
   //---------------methods------------------------
   const handleSubmit = async (e) => {
     setDisable(1);
@@ -31,7 +30,7 @@ const CreateAdmin = () => {
           name: data.name,
           email: data.email,
           password: data.password,
-          role:"admin"
+          role: "admin",
         },
         { headers: { "auth-token": token } }
       );
@@ -66,6 +65,8 @@ const CreateAdmin = () => {
   return (
     <div className="createadmin_wrapper">
       <ToastContainer />
+      <h1 className="superadmincreate_head_title">Create an Admin</h1>
+
       <form
         onSubmit={(e) => {
           handleSubmit(e);

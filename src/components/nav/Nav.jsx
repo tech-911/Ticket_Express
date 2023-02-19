@@ -36,12 +36,12 @@ const Nav = () => {
           <li className="Nav_right_list1">
             <Link to="/comming">Bus</Link>
           </li>
-          <li className="Nav_right_list2">
+          {/* <li className="Nav_right_list2">
             <Link to="/comming">Train</Link>
-          </li>
-          <li className="Nav_right_list3">
+          </li> */}
+          {/* <li className="Nav_right_list3">
             <Link to="/comming">Flights</Link>
-          </li>
+          </li> */}
           <li className="Nav_right_list4">
             {user?.user?.role === "user" && (
               <Link to="/user/booking">Bookings</Link>
@@ -87,12 +87,12 @@ const Nav = () => {
             <li className="Nav_right_list1">
               <Link to="/comming">Bus</Link>
             </li>
-            <li className="Nav_right_list2">
+            {/* <li className="Nav_right_list2">
               <Link to="/comming">Train</Link>
-            </li>
-            <li className="Nav_right_list3">
+            </li> */}
+            {/* <li className="Nav_right_list3">
               <Link to="/comming">Flights</Link>
-            </li>
+            </li> */}
             <li className="Nav_right_list4">
               {user?.user?.role === "user" && (
                 <Link to="/user/booking">Bookings</Link>

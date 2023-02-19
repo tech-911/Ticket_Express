@@ -13,7 +13,7 @@ const Index = () => {
     <div className="admin_wrapper">
       <Sidenav side={side} setSide={setSide} />
       <div className={`admin_outlet ${side ? "blur-sm" : ""}`}>
-        <div className="admin_nav">
+        <div className="admin_nav border-b-[#df69513d] border-b-[1px]">
           <GiHamburgerMenu
             onClick={() => {
               setSide(!side);
@@ -21,10 +21,10 @@ const Index = () => {
             className="admin_hamburger"
           />
           <div className="admin_nav_text_wrap">
-            <h1 className="admin_nav_text1">Hello, {user.name}!</h1>
-            <p className="admin_nav_text2">
+            <h1 className="admin_nav_text1">Welcome, {user.name}!</h1>
+            {/* <p className="admin_nav_text2">
               Welcome back Admin
-            </p>
+            </p> */}
           </div>
         </div>
         <Outlet />

@@ -35,6 +35,14 @@
 }
 
 .logs_wrapper {
+  .admindashboard_head_title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(30, 30, 30, 0.8);
+    margin: 0rem 0rem 2rem;
+  }
   .dashboard_HUD {
     display: flex;
     flex-direction: row;

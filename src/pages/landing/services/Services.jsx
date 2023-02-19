@@ -3,6 +3,7 @@ import "./services.scss";
 import Widget from "../../../components/widget/Widget";
 import { serviceData } from "./data";
 import serviceDesign from "../../../assets/png/service/service_design.png";
+import { Link } from "react-router-dom";
 const Services = () => {
   return (
     <div className="services_wrapper">
@@ -13,7 +14,11 @@ const Services = () => {
       </div>
       <div className="services_widget">
         {serviceData.map(({ id, img, text1, text2 }) => {
-          return <Widget key={id} img={img} text1={text1} text2={text2} />;
+          return (
+            <Link to="/login">
+              <Widget key={id} img={img} text1={text1} text2={text2} />
+            </Link>
+          );
         })}
       </div>
     </div>
