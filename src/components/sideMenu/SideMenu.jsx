@@ -17,8 +17,10 @@ const SideMenu = ({ link, name, icon, id }) => {
         setActive(1);
       } else if (location.pathname.includes("/user/history")) {
         setActive(2);
-      } else if (location.pathname.includes("/user/settings")) {
+      } else if (location.pathname.includes("/user/map")) {
         setActive(3);
+      } else if (location.pathname.includes("/user/settings")) {
+        setActive(4);
       }
     } else if (user.role === "admin") {
       if (location.pathname.includes("/admin/dashboard")) {

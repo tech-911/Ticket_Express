@@ -20,6 +20,7 @@ import History from "./pages/protected/user/history/History";
 import Settings from "./pages/protected/user/settings/Settings";
 import DetailsTransaction from "./pages/protected/user/transaction/DetailsTransaction";
 import Paystack from "./components/paystack/PayStack";
+import UserMap from "./pages/protected/user/map/Map";
 
 //---------------Admin pages import------------------------
 import Admin from "./pages/protected/admin";
@@ -35,6 +36,7 @@ import Details from "./pages/protected/superadmin/dashboard/Details";
 import CreateAdmin from "./pages/protected/superadmin/createAdmin/CreateAdmin";
 import SuperAdminHistory from "./pages/protected/superadmin/history/History";
 import SuperAdminSettings from "./pages/protected/superadmin/settings/Settings";
+import SettingsDetails from "./pages/protected/superadmin/settings/Details";
 
 const App = () => {
   return (
@@ -61,6 +63,7 @@ const App = () => {
           <Route path="/user/paystack" element={<Paystack />} />
           <Route path="/user/transaction" element={<Transactions />} />
           <Route path="/user/history" element={<History />} />
+          <Route path="/user/map" element={<UserMap />} />
           <Route path="/user/settings" element={<Settings />} />
         </Route>
         <Route
@@ -91,10 +94,13 @@ const App = () => {
             element={<SuperAdminDashboard />}
           />
           <Route path="/superadmin/details" element={<Details />} />
-
           <Route path="/superadmin/createadmin" element={<CreateAdmin />} />
           <Route path="/superadmin/history" element={<SuperAdminHistory />} />
           <Route path="/superadmin/settings" element={<SuperAdminSettings />} />
+          <Route
+            path="/superadmin/settingsdetails"
+            element={<SettingsDetails />}
+          />
         </Route>
       </Routes>
     </div>

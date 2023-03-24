@@ -31,7 +31,8 @@
   .icon0,
   .icon1,
   .icon2,
-  .icon3 {
+  .icon3,
+  .icon4 {
     color: white !important;
   }
 }
@@ -49,7 +50,8 @@
       .icon0,
       .icon1,
       .icon2,
-      .icon3 {
+      .icon3,
+      .icon4 {
         color: white;
       }
     }
@@ -61,7 +63,8 @@
     .icon0,
     .icon1,
     .icon2,
-    .icon3 {
+    .icon3,
+    .icon4 {
       @include LinkIcon();
       transition: all 0.3s ease-in-out;
     }

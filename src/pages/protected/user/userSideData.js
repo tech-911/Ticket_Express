@@ -2,6 +2,7 @@ import { RiBookReadFill } from "react-icons/ri";
 import { BiTransferAlt } from "react-icons/bi";
 import { AiOutlineHistory } from "react-icons/ai";
 import { FiSettings } from "react-icons/fi";
+import { BsPinMapFill } from "react-icons/bs";
 export const userSideData = [
   {
     id: 0,
@@ -23,8 +24,14 @@ export const userSideData = [
   },
   {
     id: 3,
+    name: "Map",
+    icon: <BsPinMapFill className="icon3" />,
+    link: "/user/map",
+  },
+  {
+    id: 4,
     name: "Settings",
-    icon: <FiSettings className="icon3" />,
+    icon: <FiSettings className="icon4" />,
     link: "/user/settings",
   },
 ];

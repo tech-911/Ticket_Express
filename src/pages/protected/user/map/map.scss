@@ -1,0 +1,33 @@
+.map_wrapper {
+  padding: 2rem;
+  .map_carousel {
+    .slick-prev:before,
+    .slick-next:before {
+      // display: none;
+      color: black;
+    }
+    .slick-dots {
+      li button:before {
+        color: black;
+      }
+    }
+    .map_item1 {
+      display: flex !important;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      .map_header1 {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        color: rgba(30, 30, 30, 0.8);
+      }
+      .map_iframe {
+        border: 2px solid rgba(0, 0, 0, 0.253);
+        border-radius: 8px;
+        z-index: 200;
+      }
+    }
+  }
+}

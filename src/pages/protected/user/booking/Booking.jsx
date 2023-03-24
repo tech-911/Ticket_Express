@@ -142,43 +142,25 @@ const Booking = () => {
             <option className="placeholder" value="" defaultValue={true}>
               Select Destination
             </option>
-            <option value="Abia">Abia</option>
-            <option value="Adamawa">Adamawa</option>
-            <option value="AkwaIbom">AkwaIbom</option>
-            <option value="Anambra">Anambra</option>
-            <option value="Bauchi">Bauchi</option>
-            <option value="Bayelsa">Bayelsa</option>
-            <option value="Benue">Benue</option>
-            <option value="Borno">Borno</option>
-            <option value="Cross River">Cross River</option>
-            <option value="Delta">Delta</option>
-            <option value="Ebonyi">Ebonyi</option>
-            <option value="Edo">Edo</option>
-            <option value="Ekiti">Ekiti</option>
-            <option value="Enugu">Enugu</option>
-            <option value="FCT">FCT</option>
-            <option value="Gombe">Gombe</option>
-            <option value="Imo">Imo</option>
-            <option value="Jigawa">Jigawa</option>
-            <option value="Kaduna">Kaduna</option>
-            <option value="Kano">Kano</option>
-            <option value="Katsina">Katsina</option>
-            <option value="Kebbi">Kebbi</option>
-            <option value="Kogi">Kogi</option>
-            <option value="Kwara">Kwara</option>
-            <option value="Lagos">Lagos</option>
-            <option value="Nasarawa">Nasarawa</option>
-            <option value="Niger">Niger</option>
-            <option value="Ogun">Ogun</option>
-            <option value="Ondo">Ondo</option>
-            <option value="Osun">Osun</option>
-            <option value="Oyo">Oyo</option>
-            <option value="Plateau">Plateau</option>
-            <option value="Rivers">Rivers</option>
-            <option value="Sokoto">Sokoto</option>
-            <option value="Taraba">Taraba</option>
-            <option value="Yobe">Yobe</option>
-            <option value="Zamfara">Zamafara</option>
+            <option value="Bus Park">Bus Park</option>
+            <option value="School of Agricultural Technology">
+              School of Agricultural Technology
+            </option>
+            <option value="School of Engineering Technology">
+              School of Engineering Technology
+            </option>
+            <option value="School of Environmental Technology">
+              School of Environmental Technology
+            </option>
+            <option value="CODEL">CODEL</option>
+            <option value="School Field/Clnic">School Field/Clnic</option>
+            <option value="Post Office">Post Office</option>
+            <option value="Male Hostel Block">Male Hostel Block</option>
+            <option value="New Hostel Block">New Hostel Block</option>
+            <option value="School of Physical Sciences">
+              School of Physical Sciences
+            </option>
+            <option value="Life Sciences">Life Sciences</option>
           </select>
         </div>
         <div className="booking_no">
@@ -247,9 +229,10 @@ const Booking = () => {
                 Select Cartype
               </option>
               <option value="Bus">Bus</option>
-              <option value="Sedan">Sedan</option>
-              <option value="Mini van">Mini van</option>
-              <option value="Seanna">Seanna</option>
+              <option value="Car">Car</option>
+              <option value="Sharon">Sharon</option>
+              <option value="Sharon">Keke</option>
+              <option value="Sharon">Bike</option>
             </select>
           </div>
         </div>
