@@ -10,8 +10,8 @@ const Footer = () => {
         <div className="footer_item_wrap">
           <div className="footer_logo_wrap">
             <img className="footer_logo" src={logo} alt="logo" />
-            <p className="footer_logo_text">
-              Book your trip in minute, get full Control for much longer.
+            <p className="footer_logo_text text-center">
+              Book your ticket, get full Control for much longer.
             </p>
           </div>
           <div className="footer_rightContent">
@@ -35,7 +35,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <p className="footer_copyright">All rights reserved@ticketxpress.com</p>
+        <p className="footer_copyright">
+          All rights FUT minna intra campus shuttle
+        </p>
       </div>
     </div>
   );

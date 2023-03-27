@@ -28,9 +28,11 @@ const Landing = () => {
         />
         <img className="landing_hero" src={hero} alt="hero" />
         <div className="landing_hero_text_wrap">
-          <p className="landing_hero_text1">Best all in one booking PLATFORM</p>
+          <p className="landing_hero_text1">
+            Best intra school booking platform
+          </p>
           <h1 className="landing_hero_text2">
-            Ticket Xpress, your all in one booking ticket.
+            FUT-minna Intra Campus Shuttle, your all in one booking ticket.
           </h1>
           <p className="landing_hero_text3">
             Our goal is to centralize tavel tech industry, and make ticket

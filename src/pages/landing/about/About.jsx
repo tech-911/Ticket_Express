@@ -9,12 +9,12 @@ const About = () => {
         <h1 className="about_left_text">
           Cheap and Affordable Tickets for your Vehicle Transport
         </h1>
-        <p className="about_right_text">
-          We are a Nigerian travel booking agency with thousands of travellers
-          dedicated to rock the travel world. We want our customers to spend
-          less time purchasing their travel tickets. ur mission is to save you
-          time, stress and keep you safe from Covid-19 virus with our simple
-          online travel ticket booking platform
+        <p className="about_right_text text-justify">
+          We are an intra school transport booking agency with students
+          dedicated to move from location to the other around the school. We
+          want our customers to spend less time purchasing their travel tickets.
+          Our mission is to save you time, and stress with our simple online
+          booking platform
         </p>
       </div>
     </div>

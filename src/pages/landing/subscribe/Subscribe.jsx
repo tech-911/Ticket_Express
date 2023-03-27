@@ -14,7 +14,7 @@ const Subscribe = () => {
       />
       <h1 className="subscribe_header">
         Subscribe to get information, latest news and other interesting offers
-        about Ticket Xpress
+        about FUT minna Intra campus shuttle
       </h1>
       <div className="subscribe_input_wrap">
         <div className="subscribe_input_content">

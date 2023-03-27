@@ -142,25 +142,31 @@ const Booking = () => {
             <option className="placeholder" value="" defaultValue={true}>
               Select Destination
             </option>
-            <option value="Bus Park">Bus Park</option>
-            <option value="School of Agricultural Technology">
-              School of Agricultural Technology
+            <option value="Bus Park - ₦50">Bus Park - ₦50</option>
+            <option value="School of Agricultural Technology - ₦70">
+              School of Agricultural Technology - ₦70
             </option>
-            <option value="School of Engineering Technology">
-              School of Engineering Technology
+            <option value="School of Engineering Technology - ₦70">
+              School of Engineering Technology - ₦70
             </option>
-            <option value="School of Environmental Technology">
-              School of Environmental Technology
+            <option value="School of Environmental Technology - ₦70">
+              School of Environmental Technology - ₦70
             </option>
-            <option value="CODEL">CODEL</option>
-            <option value="School Field/Clnic">School Field/Clnic</option>
-            <option value="Post Office">Post Office</option>
-            <option value="Male Hostel Block">Male Hostel Block</option>
-            <option value="New Hostel Block">New Hostel Block</option>
-            <option value="School of Physical Sciences">
-              School of Physical Sciences
+            <option value="CODEL - ₦70">CODEL - ₦70</option>
+            <option value="School Field/Clnic - ₦70">
+              School Field/Clnic - ₦70
             </option>
-            <option value="Life Sciences">Life Sciences</option>
+            <option value="Post Office - ₦70">Post Office - ₦70</option>
+            <option value="Male Hostel Block - ₦100">
+              Male Hostel Block - ₦100
+            </option>
+            <option value="New Hostel Block - ₦100">
+              New Hostel Block - ₦100
+            </option>
+            <option value="School of Physical Sciences - ₦70">
+              School of Physical Sciences - ₦70
+            </option>
+            <option value="Life Sciences - ₦70">Life Sciences - ₦70</option>
           </select>
         </div>
         <div className="booking_no">
