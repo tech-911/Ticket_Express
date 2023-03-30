@@ -234,11 +234,10 @@ const Booking = () => {
               <option className="placeholder" value="" defaultValue={true}>
                 Select Cartype
               </option>
-              <option value="Bus">Bus</option>
-              <option value="Car">Car</option>
+              <option value="Macapolo">Macapolo</option>
               <option value="Sharon">Sharon</option>
-              <option value="Sharon">Keke</option>
-              <option value="Sharon">Bike</option>
+              <option value="32 - Seater">32 - Seater</option>
+              <option value="18-seater">18-seater</option>
             </select>
           </div>
         </div>

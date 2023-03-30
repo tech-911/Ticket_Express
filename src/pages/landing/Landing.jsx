@@ -34,10 +34,11 @@ const Landing = () => {
           <h1 className="landing_hero_text2">
             FUT-minna Intra Campus Shuttle, your all in one booking ticket.
           </h1>
-          <p className="landing_hero_text3">
-            Our goal is to centralize tavel tech industry, and make ticket
-            bookings to your preffered location easily accessible fro thr
-            comfort of your home.
+          <p className="landing_hero_text3 text-justify">
+            Our goal is to centralize travel tech industry and make ticket
+            bookings to your preferred location easily accessible from the
+            comfort of your home. The bus is centralize for movement from Bosso
+            Campus - Gk campus and everyother pickup stations and vice versa
           </p>
           <button
             onClick={() => {
