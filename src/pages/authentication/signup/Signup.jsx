@@ -154,6 +154,18 @@ const Signup = () => {
                 }}
               />
             </div>
+            <div className="signup_form_email">
+              <label className="signup_form_email_label" htmlFor="nin">
+                NIN
+              </label>
+              <input
+                required
+                className="signup_form_email_input"
+                type="text"
+                id="nin"
+                maxLength="11"
+              />
+            </div>
             <div className="signup_form_password">
               <label className="signup_form_password_label" htmlFor="password">
                 Password

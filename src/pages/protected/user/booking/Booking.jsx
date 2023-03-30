@@ -142,31 +142,27 @@ const Booking = () => {
             <option className="placeholder" value="" defaultValue={true}>
               Select Destination
             </option>
-            <option value="Bus Park - ₦50">Bus Park - ₦50</option>
-            <option value="School of Agricultural Technology - ₦70">
-              School of Agricultural Technology - ₦70
+            <option value="GK - Bosso - #200">GK - Bosso - #200</option>
+            <option value="GK - Kpankungu - #150">GK - Kpankungu - #150</option>
+            <option value="Gk - Gurara - #150">Gk - Gurara - #150</option>
+            <option value="Gk - NECO Hq - #100">Gk - NECO Hq - #100</option>
+            <option value="Gk - Gidan Mangoro - #100">
+              Gk - Gidan Mangoro - #100
             </option>
-            <option value="School of Engineering Technology - ₦70">
-              School of Engineering Technology - ₦70
+            <option value="Gk - Dama - #100">Gk - Dama - #100</option>
+            <option value="Bosso - GK - #200">Bosso - GK - #200</option>
+            <option value="Bosso - Gurara - #100">Bosso - Gurara - #100</option>
+            <option value="Bosso - NECO Hq - #200">
+              Bosso - NECO Hq - #200
             </option>
-            <option value="School of Environmental Technology - ₦70">
-              School of Environmental Technology - ₦70
+            <option value="Bosso - Gidan Mangoro - #200">
+              Bosso - Gidan Mangoro - #200
             </option>
-            <option value="CODEL - ₦70">CODEL - ₦70</option>
-            <option value="School Field/Clnic - ₦70">
-              School Field/Clnic - ₦70
+            <option value="Bosso - Dama #200">Bosso - Dama #200</option>
+            <option value="Bosso - GK - #200">Bosso - GK - #200</option>
+            <option value="Bosso - Kpakungu - #100">
+              Bosso - Kpakungu - #100
             </option>
-            <option value="Post Office - ₦70">Post Office - ₦70</option>
-            <option value="Male Hostel Block - ₦100">
-              Male Hostel Block - ₦100
-            </option>
-            <option value="New Hostel Block - ₦100">
-              New Hostel Block - ₦100
-            </option>
-            <option value="School of Physical Sciences - ₦70">
-              School of Physical Sciences - ₦70
-            </option>
-            <option value="Life Sciences - ₦70">Life Sciences - ₦70</option>
           </select>
         </div>
         <div className="booking_no">
