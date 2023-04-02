@@ -70,6 +70,7 @@ const Booking = () => {
     const newData = { ...data };
     newData[e.target.id] = e.target.value;
     setData(newData);
+    console.log(newData)
   };
 
   let { name, email, destination, passangers_number, time, date, car_type } =
@@ -142,27 +143,52 @@ const Booking = () => {
             <option className="placeholder" value="" defaultValue={true}>
               Select Destination
             </option>
-            <option value="GK - Bosso - #200">GK - Bosso - #200</option>
-            <option value="GK - Kpankungu - #150">GK - Kpankungu - #150</option>
-            <option value="Gk - Gurara - #150">Gk - Gurara - #150</option>
-            <option value="Gk - NECO Hq - #100">Gk - NECO Hq - #100</option>
-            <option value="Gk - Gidan Mangoro - #100">
-              Gk - Gidan Mangoro - #100
+            <option value="GK - Bosso - ₦200">GK - Bosso - ₦200</option>
+            <option value="GK - Kpankungu - ₦150">GK - Kpankungu - ₦150</option>
+            <option value="Gk - Gurara - ₦150">Gk - Gurara - ₦150</option>
+            <option value="Gk - NECO Hq - ₦100">Gk - NECO Hq - ₦100</option>
+            <option value="Gk - Gidan Mangoro - ₦100">
+              Gk - Gidan Mangoro - ₦100
             </option>
-            <option value="Gk - Dama - #100">Gk - Dama - #100</option>
-            <option value="Bosso - GK - #200">Bosso - GK - #200</option>
-            <option value="Bosso - Gurara - #100">Bosso - Gurara - #100</option>
-            <option value="Bosso - NECO Hq - #200">
-              Bosso - NECO Hq - #200
+            <option value="Gk - Dama - ₦100">Gk - Dama - ₦100</option>
+            <option value="Bosso - GK - ₦200">Bosso - GK - ₦200</option>
+            <option value="Bosso - Gurara - ₦100">Bosso - Gurara - ₦100</option>
+            <option value="Bosso - NECO Hq - ₦200">
+              Bosso - NECO Hq - ₦200
             </option>
-            <option value="Bosso - Gidan Mangoro - #200">
-              Bosso - Gidan Mangoro - #200
+            <option value="Bosso - Gidan Mangoro - ₦200">
+              Bosso - Gidan Mangoro - ₦200
             </option>
-            <option value="Bosso - Dama #200">Bosso - Dama #200</option>
-            <option value="Bosso - GK - #200">Bosso - GK - #200</option>
-            <option value="Bosso - Kpakungu - #100">
-              Bosso - Kpakungu - #100
+            <option value="Bosso - Dama ₦200">Bosso - Dama ₦200</option>
+            <option value="Bosso - GK - ₦200">Bosso - GK - ₦200</option>
+            <option value="Bosso - Kpakungu - ₦100">
+              Bosso - Kpakungu - ₦100
             </option>
+            <option value="Gurara - GK - ₦150">Gurara - GK - ₦150</option>
+            <option value="Kpakungu - GK - ₦150">Kpakungu - GK - ₦150</option>
+            <option value="NECO Hq - GK - ₦100">NECO Hq - GK - ₦100</option>
+            <option value="Gidan Mangoro - ₦100">Gidan Mangoro - ₦100</option>
+            <option value="Dama - GK - ₦100">Dama - GK - ₦100</option>
+            <option value="Gurara - Bosso - ₦100">Gurara - Bosso - ₦100</option>
+            <option value="Kpakungu - Bosso - ₦100">
+              Kpakungu - Bosso - ₦100
+            </option>
+            <option value=" NECO Hq - Bosso - ₦200">
+              NECO Hq - Bosso - ₦200
+            </option>
+            <option value="Gidan Mangoro - Bosso - ₦200">
+              Gidan Mangoro - Bosso - ₦200
+            </option>
+            <option value=" Dama - Bosso - ₦200">Dama - Bosso - ₦200</option>
+            <option disabled value=" "></option>
+            <option disabled value=" "></option>
+            <option disabled value=" "></option>
+            <option disabled value=" "></option>
+            <option disabled value=" "></option>
+            <option disabled value=" "></option>
+            <option disabled value=" "></option>
+            <option disabled value=" "></option>
+            <option disabled value=" "></option>
           </select>
         </div>
         <div className="booking_no">
@@ -187,17 +213,27 @@ const Booking = () => {
             <label htmlFor="time" className="booking_time_label">
               Time:
             </label>
-            <input
+            <select
               id="time"
-              type="time"
               className="booking_time_input"
               required
               value={time}
               onChange={(e) => {
                 handleInput(e);
               }}
-            />
+            >
+              <option className="placeholder" value="" defaultValue={true}>
+                Select Time
+              </option>
+              <option value="07:00">7:00am</option>
+              <option value="10:00">10:00am</option>
+              <option value="12:00">12:00pm</option>
+              <option value="14:00">2:00pm</option>
+              <option value="16:00">4:00pm</option>
+              <option value="18:00">6:00pm</option>
+            </select>
           </div>
+
           <div className="booking_date">
             <label htmlFor="date" className="booking_date_label">
               Date:
